@@ -1,0 +1,20 @@
+.revImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .revImg img {
+    animation: slideOut 0.7s infinite;;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes slideOut {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(20%);
+    }
+  }
+  
