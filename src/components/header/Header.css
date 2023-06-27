@@ -1,0 +1,19 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 40px 30px 40px 30px;
+    align-items: center;
+    height: 100px;
+}
+
+.img-logo {
+    width: 70%;
+    height: 100px;
+}
+
+.icon-header {
+    width: 22px;
+    height: 27px;
+}
