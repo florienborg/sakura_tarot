@@ -69,7 +69,7 @@ function Form() {
         maxLength={100} //  limit 100 characters
         onChange={handleChange}
       />
-      <button type="submit">Submit</button>
+      <button type="submit">START</button>
       <p id="registered" hidden>
         Registered 
       </p>
