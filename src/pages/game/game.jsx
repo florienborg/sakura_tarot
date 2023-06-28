@@ -21,7 +21,7 @@ function Game() {
     <div>
       <ShowImageReverse isAnimated={isFirstImageAnimated} />
       {buttonClickCount < 3 ? (
-        <Button onClick={handleButtonClick}>Choose</Button>
+        <Button onClick={handleButtonClick}>Choose card</Button>
       ) : null}
       <div className="staticCards">
         {imageReverseList.map((item, index) => (
