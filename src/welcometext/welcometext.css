@@ -22,3 +22,18 @@ color: var(--whiteText);
 text-align: center;
 margin: 20px;
 }
+
+@media screen and (min-width: 1024px) {
+    .text-box {
+      width: 520px;
+      height: 350px;
+      margin: 400px 500px 0 0;
+    }
+
+    .welcome-text {
+        text-align: center;
+        margin: 20px;
+        font-size: 30px;
+        }
+  }; 
+ 
