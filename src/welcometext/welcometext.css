@@ -1,0 +1,24 @@
+.text-position {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-top: -180px;
+}
+
+.text-box {
+padding: 0;
+border:2px solid var(--yellowText);
+display: flex;
+justify-content: center;
+align-items: center;
+width: 350px;
+height: 135px;
+}
+
+.welcome-text {
+font-family: 'Open Sans', sans-serif;
+color: var(--whiteText);
+text-align: center;
+margin: 20px;
+}
