@@ -56,22 +56,22 @@ function Form() {
         value={formData.birthdate}
         onChange={handleChange}
       />
-      <label htmlFor="mood" className="text-input">
+      <label htmlFor="mood" className="text-mood">
         Mood:
       </label>
       <input
         type="text"
         id="mood"
         name="mood"
-        className="input-form"
+        className="input-mood"
         placeholder="Write what you feel before reading. Max 100 chars."
         value={formData.mood}
         maxLength={100} //  limit 100 characters
         onChange={handleChange}
       />
-      <button type="submit">START</button>
+      <button type="submit" className='start-buttom'>START</button>
       <p id="registered" hidden>
-        Registered 
+      Reading data has been successfully recorded
       </p>
     </form>
   );
