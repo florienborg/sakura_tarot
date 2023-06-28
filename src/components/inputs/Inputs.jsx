@@ -64,7 +64,7 @@ function Form() {
         id="mood"
         name="mood"
         className="input-mood"
-        placeholder="Write what you feel before reading. Max 100 chars."
+        placeholder="Write what you feel"
         value={formData.mood}
         maxLength={100} //  limit 100 characters
         onChange={handleChange}
