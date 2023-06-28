@@ -14,7 +14,7 @@ function apiCall() {
       });
   }
 
-  function ShowImageReverse() {
+  function ShowImageReverse({ isAnimated }) {
     const [imageURL, setImageURL] = useState('');
   
     useEffect(() => {
@@ -30,10 +30,19 @@ function apiCall() {
   
     return (
       <div className='revImg'>
-        {imageURL && <img src={imageURL} alt="Imagen" />}
+        {imageURL && (
+          <img
+            src={imageURL}
+            alt="Imagen"
+            className={isAnimated ? 'animatedImage' : ''}
+          />
+        )}
       </div>
     );
   }
   
+  
+  
+
   export default ShowImageReverse;
   

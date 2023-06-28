@@ -2,13 +2,24 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 1rem;
   }
 
   .revImg img {
-    animation: slideOut 0.7s infinite;;
+    width: 7rem;
+  }
+  
+
+  .revImg .animatedImage {
+    animation: slideOut 0.7s infinite;
     animation-fill-mode: forwards;
+    animation-play-state: running;
   }
 
+  .revImg .animatedImage.animationStopped {
+    animation-play-state: paused;
+  }
+  
   @keyframes slideOut {
     from {
       transform: translateX(0);
@@ -17,4 +28,5 @@
       transform: translateX(20%);
     }
   }
+  
   
