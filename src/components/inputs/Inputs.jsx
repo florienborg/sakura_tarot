@@ -71,7 +71,7 @@ function Form() {
       />
       <button type="submit">Submit</button>
       <p id="registered" hidden>
-        Registered successfully!
+        Registered 
       </p>
     </form>
   );
