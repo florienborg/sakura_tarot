@@ -1,6 +1,6 @@
-import ShowImageReverse from '../../components/imgRev/imgRev'
-import Button from '../../components/buttonTmp/Buttontmp'
-import './game.css'
+import ShowImageReverse from '../../components/imgRev/imgRev';
+import Button from '../../components/buttonTmp/Buttontmp';
+import './game.css';
 import React, { useState } from 'react';
 
 function Game() {
@@ -25,14 +25,18 @@ function Game() {
       ) : null}
       <div className="staticCards">
         {imageReverseList.map((item, index) => (
-          <div key={index}>{item.image}</div>
+          <div key={index}>
+            {item.image}
+            {!item.isStatic && (
+              <div>
+                <Button>View card</Button>
+              </div>
+            )}
+          </div>
         ))}
       </div>
     </div>
   );
 }
-
-
-
 
 export default Game;
