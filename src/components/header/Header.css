@@ -1,0 +1,28 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 390px;
+    padding: 40px 30px 40px 30px;
+    align-items: center;
+    height: 100px;
+}
+
+.img-logo {
+    width: 70%;
+    height: 100px;
+}
+
+.icon-header {
+    width: 22px;
+    height: 27px;
+}
+
+@media screen and (min-width: 1024px) {
+    .header {
+        width: 1024px;
+    }
+    .img-logo {
+        width: 30%;
+    }
+}
