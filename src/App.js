@@ -1,6 +1,7 @@
 import './App.css';
 import React from 'react';
-import WelcomeText from './welcometext/welcometext';  
+import WelcomeText from './components/welcometext/welcometext';
+import ApiText from './components/apitext/apitext';  
 
 function App() {
   return (
