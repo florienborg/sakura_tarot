@@ -18,7 +18,7 @@ function Game() {
   };
 
   return (
-    <div>
+    <div className='chooseContainer'>
       <ShowImageReverse isAnimated={isFirstImageAnimated} />
       {buttonClickCount < 3 ? (
         <Button onClick={handleButtonClick} text="Choose"></Button>
