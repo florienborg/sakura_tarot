@@ -1,16 +1,14 @@
 import './App.css';
 import React from 'react';
-import WelcomeText from './components/welcometext/welcometext';
-import Header from './components/header/Header'  
+import IndexPage from './pages/index';
 
 function App() {
   return (
     <div className="App">
-            <Header/>
-      <WelcomeText/>
+      <IndexPage />
     </div>
   )
-   
+
 }
 
 export default App;

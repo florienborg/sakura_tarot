@@ -1,24 +1,43 @@
 .text-position {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin-top: -180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .text-box {
 padding: 0;
-border:2px solid var(--yellowText);
+border: 1.5px solid var(--yellowText);
 display: flex;
 justify-content: center;
 align-items: center;
 width: 350px;
 height: 135px;
+position: absolute;
+top: 20%;
 }
 
 .welcome-text {
 font-family: 'Open Sans', sans-serif;
-color: var(--whiteText);
+background: linear-gradient(to right, #FFA746, #DA1010);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent; 
 text-align: center;
 margin: 20px;
 }
+
+@media screen and (min-width: 1024px) {
+  .text-box {
+    width: 450px;
+    height: 300px;
+    position: absolute;
+    top: 30%;
+    left: 10%;
+  }
+
+  .welcome-text {
+      text-align: center;
+      margin: 40px 25px 40px 25px;
+      font-size: 25px;
+      font-weight: 700;
+      }
+}; 

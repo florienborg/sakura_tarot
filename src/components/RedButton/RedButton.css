@@ -1,0 +1,21 @@
+.redBtn {
+  width: 9.375rem;
+  height: 3.125rem;
+  border: none;
+  border-radius: 1.875rem;
+  background: var(--redButton);
+  color: var(--yellowText);
+  font-size: 1.5rem;
+  font-weight: 700;
+  position: absolute;
+  top: 82%;
+  left: 30%;
+}
+
+@media screen and (min-width: 1024px) {
+  .redBtn{
+    position: absolute;
+    top: 68%;
+    left: 78%;
+  }
+}
