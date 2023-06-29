@@ -4,14 +4,13 @@ import WelcomeText from './components/welcometext/welcometext';
 import Header from './components/header/Header';
 import RedButton from './components/RedButton/RedButton';
 import Form from './components/form/Form';
-import RedButton from './components/RedButton/RedButton';
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <WelcomeText />
-      <Form />
+      <WelcomeText/>
+      <Form/>
       <RedButton/>
     </div>
   )

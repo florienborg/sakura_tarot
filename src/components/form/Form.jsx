@@ -33,7 +33,7 @@ function Form() {
     <form className="container-input" onSubmit={handleSubmit}>
       <div className='boxName'>
           <label htmlFor="name" className="textInput">
-            Name:
+            Name
           </label>
           <input
             type="text"
@@ -48,7 +48,7 @@ function Form() {
       </div>
       <div className='boxBirthdate'>
           <label htmlFor="birthdate" className="textInput">
-            Birthdate:
+            Birthdate
           </label>
           <input
             type="text"
@@ -62,7 +62,7 @@ function Form() {
       </div>
       <div className='boxMood'>
           <label htmlFor="mood" className="textInput">
-            Mood:
+            Mood
           </label>
           <textarea
             type="text"
