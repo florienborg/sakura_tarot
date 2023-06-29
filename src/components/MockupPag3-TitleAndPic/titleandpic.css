@@ -19,7 +19,7 @@ margin: 5px 0 10px 0;
 @media screen and (min-width: 1024px) {
     .title {
       position: absolute;
-      top: 35%;
+      top: 5%;
       left: 10%;
     }
 
