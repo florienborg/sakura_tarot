@@ -31,44 +31,50 @@ function Form() {
 
   return (
     <form className="container-input" onSubmit={handleSubmit}>
-      <label htmlFor="name" className="text-input">
-        Name:
-      </label>
-      <input
-        type="text"
-        id="name"
-        name="name"
-        className="input-form"
-        placeholder="Enter your name"
-        required
-        value={formData.name}
-        onChange={handleChange}
-      />
-      <label htmlFor="birthdate" className="text-input">
-        Birthdate:
-      </label>
-      <input
-        type="text"
-        id="birthdate"
-        name="birthdate"
-        className="input-form"
-        placeholder="Enter your birthdate"
-        value={formData.birthdate}
-        onChange={handleChange}
-      />
-      <label htmlFor="mood" className="text-mood">
-        Mood:
-      </label>
-      <input
-        type="text"
-        id="mood"
-        name="mood"
-        className="input-mood"
-        placeholder="Write what you feel"
-        value={formData.mood}
-        maxLength={100} //  limit 100 characters
-        onChange={handleChange}
-      />
+      <div className='boxName'>
+          <label htmlFor="name" className="textInput">
+            Name:
+          </label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            className="input-form"
+            placeholder="Enter your name"
+            required
+            value={formData.name}
+            onChange={handleChange}
+          />
+      </div>
+      <div className='boxBirthdate'>
+          <label htmlFor="birthdate" className="textInput">
+            Birthdate:
+          </label>
+          <input
+            type="text"
+            id="birthdate"
+            name="birthdate"
+            className="input-form"
+            placeholder="Enter your birthdate"
+            value={formData.birthdate}
+            onChange={handleChange}
+          />
+      </div>
+      <div className='boxMood'>
+          <label htmlFor="mood" className="textMood">
+            Mood:
+          </label>
+          <textarea
+            type="text"
+            id="mood"
+            name="mood"
+            className="input-mood"
+            placeholder="Write what you feel"
+            value={formData.mood}
+            maxLength={100} //  limit 100 characters
+            onChange={handleChange}
+          />
+        </div>
       <button type="submit" className='start-buttom'>START</button>
       <p id="registered" hidden>
       Reading data has been successfully recorded
@@ -78,3 +84,5 @@ function Form() {
 }
 
 export default Form;
+
+

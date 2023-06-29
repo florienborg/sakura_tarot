@@ -2,17 +2,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300;400;500;600;700;800;900&display=swap');
 
 
-input{
-    border-radius: 6px;
-    font-family: 'Open Sans', sans-serif;
+.container-input{
+    /* display: flex;
+    flex-direction: column; */
+
+       
 }
 
-.text-input{
+.boxName, .boxBirthdate, .boxMood{
     display: flex;
+    flex-direction: row;
     justify-content: center;
-    border-radius: 15px;
+    gap: 20px;
+    padding: 15px;
+
 }
 
+
+.textInput{  
+    border-radius: 15px;
+    justify-content: space-evenly;
+} 
+
+label{
+    color: white;
+}
+
+/* 
+label{
+    font-family: 'Merienda', cursive;
+    color: white;
+    align-items: flex-start;
+} */
+
+/* */
+
+
+/*
 .text-mood{
     display: flex;
     justify-content: center;
@@ -23,17 +49,27 @@ input{
     padding-bottom: 90px;
 
 }
-/* 
-.text-mood::placeholder {
-    overflow-y: scroll;
-    max-height: 100px;  Ajusta la altura máxima según tus necesidades 
-  } */
+
   
 
 .start-buttom{
     display: flex;
 }
 
+#resgistered{
+    font-family: 'Open Sans', sans-serif;
+}
+
 p{
     color: white;
-}
+} */
+
+
+
+
+
+/* *******************************************
+.text-mood::placeholder {
+    overflow-y: scroll;
+    max-height: 100px;  Ajusta la altura máxima según tus necesidades 
+  } */
