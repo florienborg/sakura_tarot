@@ -55,13 +55,13 @@ function Form() {
             id="birthdate"
             name="birthdate"
             className="input-form"
-            placeholder="Enter your birthdate"
+            placeholder="dd/mm/yyyy"
             value={formData.birthdate}
             onChange={handleChange}
           />
       </div>
       <div className='boxMood'>
-          <label htmlFor="mood" className="textMood">
+          <label htmlFor="mood" className="textInput">
             Mood:
           </label>
           <textarea
@@ -75,10 +75,7 @@ function Form() {
             onChange={handleChange}
           />
         </div>
-      <button type="submit" className='start-buttom'>START</button>
-      <p id="registered" hidden>
-      Reading data has been successfully recorded
-      </p>
+     
     </form>
   );
 }
