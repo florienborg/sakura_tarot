@@ -15,7 +15,7 @@
 ## Información General
 Sakura Tarot, es una App de lectura de Tarot Virtual que nos diga nuestro pasado, presente y futuro. 
 
- Nos piden que llevar a cabo el diseño y desarrollo de una App que consuma una Api externa de Sakura y que devuelva al usuario una carta para el pasado, una para el presente y otra para futuro y obtener el significado de cada carta elegida.
+ Nos piden llevar a cabo el diseño y desarrollo de una App que consuma una Api externa de Sakura y que devuelva al usuario una carta para el pasado, una para el presente y otra para futuro y obtener el significado de cada carta elegida.
 
 
 ## Clips
