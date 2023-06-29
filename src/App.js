@@ -3,6 +3,7 @@ import React from 'react';
 import WelcomeText from './components/welcometext/welcometext';
 import Header from './components/header/Header'  
 import Form from './components/form/Form';
+import RedButton from './components/RedButton/RedButton';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
             <Header/>
       <WelcomeText/>
       <Form />
+      <RedButton/>
     </div>
   )
 
