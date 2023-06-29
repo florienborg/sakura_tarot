@@ -5,7 +5,7 @@
 .container-input{
     /* display: flex;
     flex-direction: column; */
-
+   
        
 }
 
@@ -26,6 +26,14 @@
 
 label{
     color: white;
+}
+input{
+    width:138px;
+}
+
+textarea{
+    width: 138px;
+    height: 100px;
 }
 
 /* 
