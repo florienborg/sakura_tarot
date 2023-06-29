@@ -18,6 +18,10 @@
 
 }
 
+.boxBirthdate{
+    margin-left: -28px ;
+}
+
 
 .textInput{  
     border-radius: 15px;
@@ -36,48 +40,3 @@ textarea{
     height: 100px;
 }
 
-/* 
-label{
-    font-family: 'Merienda', cursive;
-    color: white;
-    align-items: flex-start;
-} */
-
-/* */
-
-
-/*
-.text-mood{
-    display: flex;
-    justify-content: center;
-}
-
-.input-mood{
-   
-    padding-bottom: 90px;
-
-}
-
-  
-
-.start-buttom{
-    display: flex;
-}
-
-#resgistered{
-    font-family: 'Open Sans', sans-serif;
-}
-
-p{
-    color: white;
-} */
-
-
-
-
-
-/* *******************************************
-.text-mood::placeholder {
-    overflow-y: scroll;
-    max-height: 100px;  Ajusta la altura máxima según tus necesidades 
-  } */
