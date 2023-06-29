@@ -29,7 +29,7 @@ function Game() {
             {item.image}
             {!item.isStatic && (
               <div>
-                <Button>View card</Button>
+                {buttonClickCount >= 3 && <Button>View card</Button>}
               </div>
             )}
           </div>
