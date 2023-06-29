@@ -1,11 +1,11 @@
 import React from "react";
 import './apitext.css';
 
-const ApiText = () => {
+const ApiText = ({ customClass }) => {
     return (
-    <div className="apitext-position">
-    <div className="apitext-box">
-        <span className="api-text">Donec lacinia, tellus at aliquam pulvinar, ligula ligula dignissim lectus, molestie eleifend arcu enim vitae erat. Nulla pellentesque orci sed dolor sodales, vel ullamcorper metus dapibus.</span>
+    <div className={`apitext-position ${customClass}`}>
+    <div className={`apitext-box ${customClass}`}>
+        <span className="api-text">Donec lacinia, tellus at aliquam pulvinar, ligula ligula dignissim lectus, molestie eleifend arcu enim vitae erat.</span>
     </div>
     </div>
     )
