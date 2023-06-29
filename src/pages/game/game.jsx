@@ -1,5 +1,5 @@
 import ShowImageReverse from '../../components/imgRev/imgRev';
-import Button from '../../components/buttonTmp/Buttontmp';
+import Button from '../../components/RedButton/RedButton';
 import './game.css';
 import React, { useState } from 'react';
 
@@ -21,7 +21,7 @@ function Game() {
     <div>
       <ShowImageReverse isAnimated={isFirstImageAnimated} />
       {buttonClickCount < 3 ? (
-        <Button onClick={handleButtonClick}>Choose card</Button>
+        <Button onClick={handleButtonClick} text="Choose"></Button>
       ) : null}
       <div className="staticCards">
         {imageReverseList.map((item, index) => (
@@ -29,7 +29,7 @@ function Game() {
             {item.image}
             {!item.isStatic && (
               <div>
-                {buttonClickCount >= 3 && <Button>View card</Button>}
+                {buttonClickCount >= 3 && <Button text="view"></Button>}
               </div>
             )}
           </div>

@@ -1,0 +1,10 @@
+.redBtn {
+  width: 9.375rem;
+  height: 3.125rem;
+  border: none;
+  border-radius: 1.875rem;
+  background: var(--redButton);
+  color: var(--yellowText);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
