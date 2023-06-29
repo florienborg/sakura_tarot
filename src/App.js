@@ -11,7 +11,7 @@ function App() {
       <Header />
       <WelcomeText />
       <Form />
-      <RedButton />
+      <RedButton text='START' />
     </div>
   )
 
