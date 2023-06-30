@@ -3,7 +3,9 @@ import '../RedButton/RedButton.css';
 
 export default function RedButton(props) {
     return (
-        <button className='redBtn' onClick=''>{props.text}</button>
+        <button className='redBtn' onClick={props.onClick}>
+      {props.text}
+    </button>
     )
 }
 
