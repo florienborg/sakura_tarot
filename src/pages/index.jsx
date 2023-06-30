@@ -11,7 +11,7 @@ function indexPage() {
       <Header />
       <WelcomeText/>
       <Form/>
-      <RedButton />
+      <RedButton text='START' />
     </div>
   )
 
