@@ -1,14 +1,10 @@
 import './App.css';
 import React from 'react';
-import IndexPage from './pages/index';
-import Game from './pages/game/game';
+import Router from './application/Router';
 
 function App() {
   return (
-    <div className="App">
-      <IndexPage />
-      <Game />
-    </div>
+    <Router />
   )
 
 }
