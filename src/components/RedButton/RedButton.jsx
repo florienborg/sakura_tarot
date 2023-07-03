@@ -10,5 +10,14 @@ export default function RedButton(props) {
 }
 
 RedButton.defaultProps = {
-    default: 'SAVE',
+    text: 'SAVE',
+
 }
+
+// export default function RedButton({ children, ...rest }) {
+//     return (
+//         <button className='redBtn' {...rest}>
+//             {children}
+//         </button>
+//     )
+// }

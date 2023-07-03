@@ -1,5 +1,5 @@
 import React from "react";
-import ApiText from "../apitext/apitext";
+import ApiText from "../../components/apitext/apitext";
 import './savedreadings.css';
 
 
