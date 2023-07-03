@@ -1,28 +1,19 @@
 // imgRev.jsx
 import './imgRev.css';
 import React, { useState, useEffect } from 'react';
+import apiService from '../../services/apiService';
+import Button from '../../components/RedButton/RedButton';
 
-function apiCall() {
-  return fetch('https://6388b6e5a4bb27a7f78f96a5.mockapi.io/sakura-cards/')
-    .then(response => {
-      if (!response.ok) {
-        throw new Error("Error HTTP: " + response.status);
-      }
-      return response.json();
-    })
-    .catch(error => {
-      console.log("error:", error);
-    });
-}
-
-function ShowImageReverse({ isAnimated }) {
+//este componente tiene que recibir la url de imagen
+function ShowImageReverse({ isAnimated, isSelected }) {
   const [imageURL, setImageURL] = useState('');
 
   useEffect(() => {
-    apiCall()
+    apiService()
       .then(data => {
+        //poner esto en una funcion que recibe un maso y solo da una carta random, y luego definir esta funcion en game
         const randomIndex = Math.floor(Math.random() * data.length);
-        const imgRev = isAnimated ? data[randomIndex].cardsReverse.clowReverse : data[randomIndex].clowCard;
+        const imgRev = data[randomIndex].cardsReverse.clowReverse;
         setImageURL(imgRev);
       })
       .catch(error => {
@@ -33,11 +24,14 @@ function ShowImageReverse({ isAnimated }) {
   return (
     <div className='revImg'>
       {imageURL && (
+        <>
         <img
           src={imageURL}
           alt="Imagen"
           className={isAnimated ? 'animatedImage' : ''}
         />
+        {isSelected ? <Button text="view" type="view"></Button>: null}
+        </>
       )}
     </div>
   );
