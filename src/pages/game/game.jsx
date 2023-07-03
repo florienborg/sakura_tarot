@@ -1,6 +1,6 @@
 import ShowImageReverse from '../../components/imgRev/imgRev';
 import Button from '../../components/RedButton/RedButton';
-import './game.css';
+import './Game.css';
 import React, { useState } from 'react';
 
 function Game() {
