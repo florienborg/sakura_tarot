@@ -50,7 +50,7 @@ function Form() {
             id="name"
             name="name"
             className="input-form"
-            placeholder="Enter your name"
+            placeholder="Write your name"
             required
             value={formData.name}
             onChange={handleChange}
@@ -79,9 +79,9 @@ function Form() {
             id="mood"
             name="mood"
             className="input-mood"
-            placeholder="Write what you feel. Max 100 characthers"
+            placeholder="Tell us how you are feeling today :)"
             value={formData.mood}
-            maxLength={100} //  limit 100 characters
+            maxLength={100}
             onChange={handleChange}
           />
         </div>
