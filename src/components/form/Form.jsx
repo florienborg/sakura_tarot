@@ -85,7 +85,9 @@ function Form() {
             onChange={handleChange}
           />
         </div>
+        <div className='button-form'>
         <RedButton text="START" onClick={onClickHandler} />
+        </div>
     </form>
   );
 }

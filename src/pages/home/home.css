@@ -1,0 +1,17 @@
+.App {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 50px 20px;
+}
+
+@media screen and (min-width: 1024px) {
+    .App {
+        display: flex;
+        flex-direction: row;
+        margin: 50px 60px;
+        justify-content: space-between;
+    }
+
+}

@@ -3,16 +3,21 @@ import WelcomeText from '../../components/welcometext/welcometext';
 import Form from '../../components/form/Form';
 import Header from '../../components/header/Header';
 import '../../App.css';
+import './home.css';
 
 
 function Home() {
   
 
   return (
-    <div className="App">
+    <div>
+      <div className='Header'>
       <Header />
-      <WelcomeText/>
-      <Form/>
+      </div>
+      <div className="App">
+        <WelcomeText/>
+        <Form/>
+      </div>
     </div>
   )
 }
