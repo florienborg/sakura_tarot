@@ -1,11 +1,14 @@
 import './App.css';
 import React from 'react';
+import GamePage from './pages/game/game'
+
 
 function App() {
   return (
-    <div className="App">
+    <div>
+      <GamePage />
     </div>
-  )
+  );
 }
 
 export default App;

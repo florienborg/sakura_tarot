@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import './Form.css';
+import RedButton from '../RedButton/RedButton';
+import { useNavigate } from "react-router-dom";
 
 function Form() {
   const [formData, setFormData] = useState({
@@ -7,6 +9,14 @@ function Form() {
     birthdate: '',
     mood: '',
   });
+
+  const navigate = useNavigate()
+
+  function onClickHandler() {
+    // tomar datos usuario
+    // guardar datos del usurio
+    navigate("/game")
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -75,7 +85,7 @@ function Form() {
             onChange={handleChange}
           />
         </div>
-     
+        <RedButton text="START" onClick={onClickHandler} />
     </form>
   );
 }
