@@ -12,31 +12,44 @@ function Form() {
 
   const navigate = useNavigate()
 
-  function onClickHandler() {
-    // tomar datos usuario
-    // guardar datos del usurio
-    navigate("/game")
-  }
+  // function onClickHandler() {
+  //   // tomar datos usuario
+  //   // guardar datos del usurio
+  //   navigate("/game")
+  // }
 
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(formData);
-    setFormData({
-      name: '',
-      birthdate: '',
-      mood: '',
-    });
-    const registeredText = document.getElementById('registered');
-    registeredText.removeAttribute('hidden');
+
+    fetch('http://localhost:3001/formdata', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(formData)
+    })
+      .then(response => {
+        console.log(response); // Puedes manejar la respuesta del servidor aquí si lo deseas
+        setFormData({
+          name: '',
+          birthdate: '',
+          mood: '',
+        });
+        navigate("/game");
+      })
+      .catch(error => {
+        console.log(error); // Puedes manejar el error aquí si lo deseas
+      });
   };
+  
+  
 
   const handleChange = (e) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
     });
-    const registeredText = document.getElementById('registered');
-    registeredText.setAttribute('hidden', true);
   };
 
   return (
@@ -67,6 +80,7 @@ function Form() {
             className="input-form"
             placeholder="dd/mm/yyyy"
             value={formData.birthdate}
+            maxLength={10}
             onChange={handleChange}
           />
       </div>
@@ -86,9 +100,10 @@ function Form() {
           />
         </div>
         <div className='button-form'>
-        <RedButton text="START" onClick={onClickHandler} />
+        <RedButton text="START" type="submit" />
         </div>
     </form>
+  
   );
 }
 

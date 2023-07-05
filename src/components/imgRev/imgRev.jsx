@@ -2,7 +2,6 @@
 import './imgRev.css';
 import React, { useState, useEffect } from 'react';
 import apiService from '../../services/apiService';
-import Button from '../../components/RedButton/RedButton';
 
 //este componente tiene que recibir la url de imagen
 function ShowImageReverse({ isAnimated, isSelected }) {
@@ -30,7 +29,7 @@ function ShowImageReverse({ isAnimated, isSelected }) {
           alt="Imagen"
           className={isAnimated ? 'animatedImage' : ''}
         />
-        {isSelected ? <Button text="view" type="view"></Button>: null}
+        {/* {isSelected ? <Button text="view" type="view"></Button>: null} */}
         </>
       )}
     </div>
