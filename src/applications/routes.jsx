@@ -15,9 +15,6 @@ const routes = [
     element: <Game />,
   },
 
-
-
-
   {
     path: "/saved",
     element: <SavedReadings />,

@@ -63,7 +63,7 @@ function Game() {
   
   return (
     <div className='chooseContainer'>
-      {showCard === false ?<div>
+      {showCard === false ?<div className='childContainer'>
         <ShowImageReverse imageUrl={cardReverse} isAnimated={isFirstImageAnimated} isSelected={false} />
       {buttonClickCount < 3 ? (
         <Button onClick={handleButtonClick} text='choose' type="choose"></Button>
