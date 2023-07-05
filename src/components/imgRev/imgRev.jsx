@@ -1,37 +1,17 @@
 // imgRev.jsx
 import './imgRev.css';
 import React, { useState, useEffect } from 'react';
-import apiService from '../../services/apiService';
-import Button from '../../components/RedButton/RedButton';
 
-//este componente tiene que recibir la url de imagen
-function ShowImageReverse({ isAnimated, isSelected }) {
-  const [imageURL, setImageURL] = useState('');
-
-  useEffect(() => {
-    apiService()
-      .then(data => {
-        //poner esto en una funcion que recibe un maso y solo da una carta random, y luego definir esta funcion en game
-        const randomIndex = Math.floor(Math.random() * data.length);
-        const imgRev = data[randomIndex].cardsReverse.clowReverse;
-        setImageURL(imgRev);
-      })
-      .catch(error => {
-        console.log("error:", error);
-      });
-  }, [isAnimated]);
+function ShowImageReverse({ isAnimated, imageUrl, card, onClick }) {
 
   return (
-    <div className='revImg'>
-      {imageURL && (
-        <>
+    <div className='revImg' onClick={onClick}>
+      {imageUrl && (
         <img
-          src={imageURL}
+          src={imageUrl}
           alt="Imagen"
           className={isAnimated ? 'animatedImage' : ''}
         />
-        {isSelected ? <Button text="view" type="view"></Button>: null}
-        </>
       )}
     </div>
   );
