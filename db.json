@@ -5,24 +5,6 @@
       "birthdate": "12/03/1994",
       "mood": "Good!",
       "id": 1
-    },
-    {
-      "name": "Florencia",
-      "birthdate": "12/03/1994",
-      "mood": "Amazing!!!!!",
-      "id": 2
-    },
-    {
-      "name": "Florencia",
-      "birthdate": "12/03/1994",
-      "mood": "Full of joy :)",
-      "id": 3
-    },
-    {
-      "name": "Lea",
-      "birthdate": "05/08/1990",
-      "mood": "Muy bien",
-      "id": 4
     }
   ]
 }
