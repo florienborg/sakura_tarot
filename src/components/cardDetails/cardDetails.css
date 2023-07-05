@@ -1,0 +1,16 @@
+.cardDetailsContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.cardHeadline {
+  color: var(--whiteText);
+}
+
+.meaning {
+  text-align: center;
+  padding: 2rem 3rem;
+}
