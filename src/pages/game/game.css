@@ -17,6 +17,11 @@
   align-items: center;
 }
 
+.buttons {
+  display: flex;
+  gap: 2rem;
+}
+
 @media screen and (min-width: 1024px) {
   .childContainer {
     width: 100vw;

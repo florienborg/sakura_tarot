@@ -23,6 +23,18 @@
       "birthdate": "14/02/1992",
       "mood": "hola",
       "id": 4
+    },
+    {
+      "name": "Lea",
+      "birthdate": "14/02/1992",
+      "mood": ".",
+      "id": 5
+    },
+    {
+      "name": "Lea",
+      "birthdate": "14/02/1992",
+      "mood": "cc",
+      "id": 6
     }
   ]
 }
