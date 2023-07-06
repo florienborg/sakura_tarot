@@ -6,7 +6,7 @@
 
 ## Tabla de contenidos 
    1. [Información General](#información-general)
-   2. [Mockups](#muckups)
+   2. [Mockups](#mockups)
    3. [Tecnologías](#tecnologías)
    4. [Herramientas](#herramientas)
    5. [Instalación](#instalación)
