@@ -17,6 +17,10 @@
   align-items: center;
 }
 
+.hiddenTitle {
+  margin: 0;
+}
+
 .time {
   color: var(--whiteText);
   font-family: "Merienda", cursive;
