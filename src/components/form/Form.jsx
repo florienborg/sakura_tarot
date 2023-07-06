@@ -79,6 +79,7 @@ function Form() {
             name="birthdate"
             className="input-form"
             placeholder="dd/mm/yyyy"
+            required
             value={formData.birthdate}
             maxLength={10}
             onChange={handleChange}
@@ -94,6 +95,7 @@ function Form() {
             name="mood"
             className="input-mood"
             placeholder="Tell us how you are feeling today :)"
+            required
             value={formData.mood}
             maxLength={100}
             onChange={handleChange}
