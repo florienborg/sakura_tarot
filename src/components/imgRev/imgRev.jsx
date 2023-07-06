@@ -1,6 +1,6 @@
 // imgRev.jsx
 import './imgRev.css';
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 function ShowImageReverse({ isAnimated, imageUrl, card, onClick }) {
 

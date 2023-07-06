@@ -5,6 +5,7 @@ import './game.css';
 import React, { useState, useEffect } from 'react';
 import apiService from '../../services/apiService';
 
+//esta funcion se puede poner en otro archivo
 const getRandomCard = (deck)=> {
   const randomIndex = Math.floor(Math.random() * deck.length);
   return deck[randomIndex];
@@ -41,7 +42,7 @@ function Game() {
   };
 
   const handleViewClick = (card, index)=>{
-
+    //se puede hacer una funcion que se llame getTitle en otro archivo que reciba el indice de la carta y devuelva el titulo
     if(index === 0){
       card.headline = 'Past';
     } 
@@ -52,6 +53,7 @@ function Game() {
       card.headline = 'Future';
     }
 
+    card.isViewed = true;
     setShowedCard(card);
     setShowCard(true);
   }
@@ -60,13 +62,20 @@ function Game() {
     setShowedCard(null);
     setShowCard(false);
   }
-  
+
+  let buttonsShowed = false;
+  if(selectedCards.length>0){
+    //esto se puede poner en una funcion en otro archivo con o sin for
+    buttonsShowed = selectedCards[0].isViewed && selectedCards[1].isViewed && selectedCards[2].isViewed
+    console.log('buttonsShowed', buttonsShowed)
+  }
+
   return (
     <div className='chooseContainer'>
       {showCard === false ?<div className='childContainer'>
         <ShowImageReverse imageUrl={cardReverse} isAnimated={isFirstImageAnimated} isSelected={false} />
       {buttonClickCount < 3 ? (
-        <Button onClick={handleButtonClick} text='choose' type="choose"></Button>
+        <Button onClick={handleButtonClick} text='CHOOSE' type="choose"></Button>
       ) : null}
       <div className="staticCards">
         {selectedCards.map((item, index) => (
@@ -77,8 +86,8 @@ function Game() {
       </div> 
       </div> : null
       }
-     
       {showCard && <CardDetails headline={showedCard.headline} imageUrl={showedCard.clowCard} text={showedCard.meaning} onReturnClick={handleReturnClick}/>}
+      {buttonsShowed && <div className='buttons'><Button text='SAVE'/> <Button text='RESTART'/></div>}
     </div>
   );
 }
