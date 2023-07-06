@@ -6,7 +6,7 @@
 
 ## Tabla de contenidos 
    1. [Información General](#información-general)
-   2. [Clips](#clips)
+   2. [Mockups](#mockups)
    3. [Tecnologías](#tecnologías)
    4. [Herramientas](#herramientas)
    5. [Instalación](#instalación)
@@ -18,7 +18,7 @@ Sakura Tarot, es una App de lectura de Tarot Virtual que nos diga nuestro pasado
  Nos piden llevar a cabo el diseño y desarrollo de una App que consuma una Api externa de Sakura y que devuelva al usuario una carta para el pasado, una para el presente y otra para futuro y obtener el significado de cada carta elegida.
 
 
-## Clips
+## Mockups
 
 #### Version Mobile
 ![Version Mobile ](./src/assets/img/mobile-version.png)
