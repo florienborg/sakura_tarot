@@ -57,6 +57,10 @@
     flex-direction: column;
   }
 
+  .hiddenTitle {
+    margin: 1.34rem;
+  }
+
   .buttons {
     display: flex;
     align-items: center;

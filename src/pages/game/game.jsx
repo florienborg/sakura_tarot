@@ -5,6 +5,7 @@ import './game.css';
 import React, { useState, useEffect } from 'react';
 import apiService from '../../services/apiService';
 import { useNavigate } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 //esta funcion se puede poner en otro archivo
 const getRandomCard = (deck)=> {
@@ -43,6 +44,7 @@ function Game() {
     console.log('selectedCards', selectedCards)
   };
 
+  //se puede poner la funcion getTitle en otro archivo 
   const getTitle = (index) => {
     if (index === 0) {
       return "Past";
@@ -55,17 +57,7 @@ function Game() {
   };
 
   const handleViewClick = (card, index)=>{
-    //se puede hacer una funcion que se llame getTitle en otro archivo que reciba el indice de la carta y devuelva el titulo
-    if(index === 0){
-      card.headline = 'Past';
-    } 
-    if(index === 1){
-      card.headline = 'Present';
-    }
-    if(index === 2){
-      card.headline = 'Future';
-    }
-
+    card.headline = getTitle(index);
     card.isViewed = true;
     setShowedCard(card);
     setShowCard(true);
@@ -79,7 +71,7 @@ function Game() {
   let buttonsShowed = false;
   if(selectedCards.length>0){
     //esto se puede poner en una funcion en otro archivo con o sin for
-    buttonsShowed = selectedCards[0].isViewed && selectedCards[1].isViewed && selectedCards[2].isViewed
+    buttonsShowed = selectedCards[0].isViewed && selectedCards[1].isViewed && selectedCards[2].isViewed && showCard === false
     console.log('buttonsShowed', buttonsShowed)
   }
 
@@ -111,7 +103,7 @@ function Game() {
       </div> : null
       }
       {showCard && <CardDetails headline={showedCard.headline} imageUrl={showedCard.clowCard} text={showedCard.meaning} onReturnClick={handleReturnClick}/>}
-      {buttonsShowed && <div className='buttons'><Button onClick={handleSaveButtonClick} text='SAVE'/> <Button text='RESTART'/></div>}
+      {buttonsShowed && <div className='buttons'><Button onClick={handleSaveButtonClick} text='SAVE'/> <Link to="/" ><Button text='RESTART'/></Link></div>}
     </div>
   );
 }
