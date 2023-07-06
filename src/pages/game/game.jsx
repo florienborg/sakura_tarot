@@ -4,6 +4,7 @@ import CardDetails from '../../components/cardDetails/cardDetails';
 import './game.css';
 import React, { useState, useEffect } from 'react';
 import apiService from '../../services/apiService';
+import { useNavigate } from 'react-router-dom';
 
 //esta funcion se puede poner en otro archivo
 const getRandomCard = (deck)=> {
@@ -18,6 +19,7 @@ function Game() {
   const [showCard, setShowCard] = useState(false);
   const [deck, setDeck] = useState([]);
   const [showedCard, setShowedCard] = useState(null);
+
 
   useEffect(() => {
     apiService()
@@ -70,6 +72,11 @@ function Game() {
     console.log('buttonsShowed', buttonsShowed)
   }
 
+  const navigate = useNavigate();
+  const handleSaveButtonClick = () => {
+    navigate('/saved', { state: { selectedCards }});
+  }
+
   return (
     <div className='chooseContainer'>
       {showCard === false ?<div className='childContainer'>
@@ -77,6 +84,8 @@ function Game() {
       {buttonClickCount < 3 ? (
         <Button onClick={handleButtonClick} text='CHOOSE' type="choose"></Button>
       ) : null}
+
+
       <div className="staticCards">
         {selectedCards.map((item, index) => (
           <div key={index}>
@@ -87,7 +96,7 @@ function Game() {
       </div> : null
       }
       {showCard && <CardDetails headline={showedCard.headline} imageUrl={showedCard.clowCard} text={showedCard.meaning} onReturnClick={handleReturnClick}/>}
-      {buttonsShowed && <div className='buttons'><Button text='SAVE'/> <Button text='RESTART'/></div>}
+      {buttonsShowed && <div className='buttons'><Button onClick={handleSaveButtonClick} text='SAVE'/> <Button text='RESTART'/></div>}
     </div>
   );
 }

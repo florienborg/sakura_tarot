@@ -1,9 +1,12 @@
 import React from "react";
 import ApiText from "../../components/apitext/apitext";
 import './savedreadings.css';
+import { useLocation } from "react-router-dom";
 
 
 const SavedReadings = () =>{
+const { state } = useLocation();
+console.log(state);
     return (
     <div className="savings-container">
         <div className="title">
