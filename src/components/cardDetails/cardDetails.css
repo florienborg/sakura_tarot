@@ -8,9 +8,12 @@
 
 .cardHeadline {
   color: var(--whiteText);
+  font-family: "Merienda", cursive;
 }
 
 .meaning {
+  font-family: "Open Sans", sans-serif;
   text-align: center;
   padding: 2rem 3rem;
+  margin: 0;
 }

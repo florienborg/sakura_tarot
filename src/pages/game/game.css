@@ -17,16 +17,44 @@
   align-items: center;
 }
 
+.hiddenTitle {
+  margin: 0;
+}
+
+.time {
+  color: var(--whiteText);
+  font-family: "Merienda", cursive;
+  text-align: center;
+  margin: 2rem 0rem 1rem 0rem;
+  font-size: 1.5rem;
+}
+
+.buttons {
+  display: flex;
+  gap: 2rem;
+}
+
 @media screen and (min-width: 1024px) {
   .childContainer {
     width: 100vw;
-    height: 80vh;
+    height: 85vh;
     flex-direction: row;
     justify-content: space-around;
   }
 
   .staticCards {
     gap: 3rem;
+  }
+
+  .time {
+    color: var(--whiteText);
+    font-family: "Merienda", cursive;
+    text-align: center;
+  }
+
+  .titleAndPic {
+    display: flex;
+    flex-direction: column;
   }
 
   .buttons {

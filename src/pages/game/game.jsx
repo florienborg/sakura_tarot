@@ -43,6 +43,17 @@ function Game() {
     console.log('selectedCards', selectedCards)
   };
 
+  const getTitle = (index) => {
+    if (index === 0) {
+      return "Past";
+    } else if (index === 1) {
+      return "Present";
+    } else if (index === 2) {
+      return "Future";
+    }
+    return ""; 
+  };
+
   const handleViewClick = (card, index)=>{
     //se puede hacer una funcion que se llame getTitle en otro archivo que reciba el indice de la carta y devuelva el titulo
     if(index === 0){
@@ -80,7 +91,10 @@ function Game() {
   return (
     <div className='chooseContainer'>
       {showCard === false ?<div className='childContainer'>
-        <ShowImageReverse imageUrl={cardReverse} isAnimated={isFirstImageAnimated} isSelected={false} />
+        <div className='titleAndPic'>
+          <h1 className='hiddenTitle'>First Image</h1>
+          <ShowImageReverse imageUrl={cardReverse} isAnimated={isFirstImageAnimated} isSelected={false} />
+        </div>
       {buttonClickCount < 3 ? (
         <Button onClick={handleButtonClick} text='CHOOSE' type="choose"></Button>
       ) : null}
@@ -89,6 +103,7 @@ function Game() {
       <div className="staticCards">
         {selectedCards.map((item, index) => (
           <div key={index}>
+            <h1 className='time'>{getTitle(index)}</h1>
             <ShowImageReverse imageUrl={cardReverse} isAnimated={false} isSelected={true} onClick={()=>handleViewClick(item, index)}/> 
           </div>
         ))}
