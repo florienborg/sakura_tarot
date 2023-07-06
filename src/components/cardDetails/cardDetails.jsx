@@ -1,7 +1,6 @@
 
-import React, { useState, useEffect } from 'react';
-//cambiar nombre de componente RedButton por Button
-import Button from '../../components/RedButton/RedButton';
+import React from 'react';
+import Button from '../../components/Button/Button';
 import './cardDetails.css';
 
 function CardDetails({ headline, imageUrl, text, onReturnClick }) {
