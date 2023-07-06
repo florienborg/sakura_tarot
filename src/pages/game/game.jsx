@@ -1,5 +1,5 @@
 import ShowImageReverse from '../../components/imgRev/imgRev';
-import Button from '../../components/RedButton/RedButton';
+import Button from '../../components/Button/Button';
 import CardDetails from '../../components/cardDetails/cardDetails';
 import './game.css';
 import React, { useState, useEffect } from 'react';
@@ -71,7 +71,8 @@ function Game() {
   let buttonsShowed = false;
   if(selectedCards.length>0){
     //esto se puede poner en una funcion en otro archivo con o sin for
-    buttonsShowed = selectedCards[0].isViewed && selectedCards[1].isViewed && selectedCards[2].isViewed && showCard === false
+    // buttonsShowed = selectedCards[0].isViewed && selectedCards[1].isViewed && selectedCards[2].isViewed && showCard === false
+    buttonsShowed = selectedCards.every(card => card && card.isViewed) && !showCard;
     console.log('buttonsShowed', buttonsShowed)
   }
 

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Form.css';
-import RedButton from '../RedButton/RedButton';
+import Button from '../Button/Button';
 import { useNavigate } from "react-router-dom";
 
 function Form() {
@@ -100,7 +100,7 @@ function Form() {
           />
         </div>
         <div className='button-form'>
-        <RedButton text="START" type="submit" />
+        <Button text="START" type="submit" />
         </div>
     </form>
   
