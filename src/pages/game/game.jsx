@@ -5,6 +5,7 @@ import './game.css';
 import React, { useState, useEffect } from 'react';
 import apiService from '../../services/apiService';
 import { useNavigate } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 //esta funcion se puede poner en otro archivo
 const getRandomCard = (deck)=> {
@@ -111,7 +112,7 @@ function Game() {
       </div> : null
       }
       {showCard && <CardDetails headline={showedCard.headline} imageUrl={showedCard.clowCard} text={showedCard.meaning} onReturnClick={handleReturnClick}/>}
-      {buttonsShowed && <div className='buttons'><Button onClick={handleSaveButtonClick} text='SAVE'/> <Button text='RESTART'/></div>}
+      {buttonsShowed && <div className='buttons'><Button onClick={handleSaveButtonClick} text='SAVE'/> <Link to="/" ><Button text='RESTART'/></Link></div>}
     </div>
   );
 }
