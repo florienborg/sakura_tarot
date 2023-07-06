@@ -1,0 +1,18 @@
+{
+  "formdata": [
+    {
+      "name": "Flor",
+      "birthdate": "12/03/1994",
+      "mood": "Good!",
+      "id": 1,
+      "readings": []
+    },
+    
+    {
+      "name": "Lea ",
+      "birthdate": "14/05/1995",
+      "mood": "Good!",
+      "id": 2
+    }
+  ]
+}
