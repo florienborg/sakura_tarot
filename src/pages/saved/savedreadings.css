@@ -2,37 +2,35 @@
     color: var(--whiteText);
     font-family: 'Merienda', sans-serif;
     display: flex;
-    justify-content: center;
-    align-items: center; 
+    flex-direction: column;
+    
 }
 
 .title {
     font-size: 30px;
-    position: absolute;
-    top: 15%; 
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
 }
 
- .date {
-    position: absolute;
-    top: 28.5%;
-    left: 45%;
-    font-size: 22px;
+.reading {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
 }
 
 .api-card {
-    position: absolute;
     width: 102px;
     height: auto;
-    top: 28%;
-    left: 10%;
+    display:flex;
+    margin-right: 40px;
  }
 
-.custom-apitext {
-    position: absolute;
-    top: 29%;
-    left: 32%;
-    width: 175px;
-    height: 170px;
-    font-size: 16px;
-}
 
+.mood-data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+}
