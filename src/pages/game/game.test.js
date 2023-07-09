@@ -21,9 +21,9 @@ describe('Game integration tests', () => {
 
 
 test('renders Button component within Game component', () => {
-    render(<Button text="Test Button" />);
+    render(<Button text="SAVE" />);
 
-    const button = screen.getByText('Test Button');
+    const button = screen.getByText('SAVE');
     expect(button).toBeInTheDocument();
 });
 
