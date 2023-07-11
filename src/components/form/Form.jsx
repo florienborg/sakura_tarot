@@ -12,12 +12,6 @@ function Form() {
 
   const navigate = useNavigate()
 
-  // function onClickHandler() {
-  //   // tomar datos usuario
-  //   // guardar datos del usurio
-  //   navigate("/game")
-  // }
-
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(formData);
@@ -30,7 +24,7 @@ function Form() {
       body: JSON.stringify(formData)
     })
       .then(response => {
-        console.log(response); // Puedes manejar la respuesta del servidor aquí si lo deseas
+        console.log(response); 
         setFormData({
           name: '',
           birthdate: '',
@@ -39,7 +33,7 @@ function Form() {
         navigate("/game");
       })
       .catch(error => {
-        console.log(error); // Puedes manejar el error aquí si lo deseas
+        console.log(error); 
       });
   };
   

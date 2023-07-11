@@ -7,7 +7,7 @@ import apiService from '../../services/apiService';
 import { useNavigate } from 'react-router-dom';
 import { Link } from "react-router-dom";
 
-//esta funcion se puede poner en otro archivo
+
 const getRandomCard = (deck)=> {
   const randomIndex = Math.floor(Math.random() * deck.length);
   return deck[randomIndex];
@@ -25,7 +25,6 @@ function Game() {
   useEffect(() => {
     apiService()
       .then(data => {
-        //esta card no se usa para nada en particular sino para usar la imagen reversa unicamente
         const card = getRandomCard(data)
         setCardReverse(card.cardsReverse.clowReverse)
         setDeck(data)
@@ -41,10 +40,8 @@ function Game() {
     setSelectedCards(prevList => [...prevList, getRandomCard(deck)]);
     setButtonClickCount(prevCount => prevCount + 1);
 
-    console.log('selectedCards', selectedCards)
   };
 
-  //se puede poner la funcion getTitle en otro archivo 
   const getTitle = (index) => {
     if (index === 0) {
       return "Past";
@@ -70,8 +67,6 @@ function Game() {
 
   let buttonsShowed = false;
   if(selectedCards.length>0){
-    //esto se puede poner en una funcion en otro archivo con o sin for
-    // buttonsShowed = selectedCards[0].isViewed && selectedCards[1].isViewed && selectedCards[2].isViewed && showCard === false
     buttonsShowed = selectedCards.every(card => card && card.isViewed) && !showCard;
     console.log('buttonsShowed', buttonsShowed)
   }
