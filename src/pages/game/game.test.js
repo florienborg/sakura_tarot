@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
-import Game from './Game';
+import Game from './game';
 import Button from '../../components/Button/Button';
 
 describe('Game integration tests', () => {
@@ -26,11 +26,6 @@ test('renders Button component within Game component', () => {
     const button = screen.getByText('SAVE');
     expect(button).toBeInTheDocument();
 });
-
-jest.mock('react-router-dom', () => ({
-    ...jest.requireActual('react-router-dom'),
-    useNavigate: jest.fn()
-}));
 
 
 
