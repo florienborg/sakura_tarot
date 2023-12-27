@@ -1,5 +1,5 @@
 import ShowImageReverse from '../../components/imgRev/imgRev';
-import Button from '../../components/Button/Button';
+import Button from '../../components/Button/Button.jsx';
 import CardDetails from '../../components/cardDetails/cardDetails';
 import './game.css';
 import React, { useState, useEffect } from 'react';

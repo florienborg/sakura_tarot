@@ -49,7 +49,11 @@ Para instalar las dependencias:
 
   `npm install`
 
+  `npm install json-server --save-dev`
+
 Para ejecutar la App en modo desarrollo:
+
+  npm run json-server
 
   `npm start`
 

@@ -1,9 +1,9 @@
 import React from 'react';
-import WelcomeText from '../../components/welcometext/welcometext';
+import WelcomeText from '../../components/welcometext/WelcomeText';
 import Form from '../../components/form/Form';
 import Header from '../../components/header/Header';
 import '../../App.css';
-import './home.css';
+import './Home.css';
 
 
 function Home() {
@@ -11,10 +11,8 @@ function Home() {
 
   return (
     <div>
-      <div className='Header'>
       <Header />
-      </div>
-      <div className="App">
+      <div className="form-container">
         <WelcomeText/>
         <Form/>
       </div>

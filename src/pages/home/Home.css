@@ -1,4 +1,4 @@
-.App {
+.form-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -7,7 +7,7 @@
 }
 
 @media screen and (min-width: 1024px) {
-    .App {
+    .form-container {
         display: flex;
         flex-direction: row;
         margin: 50px 60px;

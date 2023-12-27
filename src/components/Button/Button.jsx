@@ -1,15 +1,14 @@
 import React from 'react';
 import '../Button/Button.css';
 
-export default function Button(props) {
+export default function Button({onClick, text}) {
     return (
-        <button className='redBtn' onClick={props.onClick}>
-      {props.text}
+        <button className='red-button' onClick={onClick}>
+      {text}
     </button>
     )
 }
 
 Button.defaultProps = {
     text: 'SAVE',
-
 }

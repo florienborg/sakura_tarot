@@ -1,4 +1,3 @@
-// imgRev.jsx
 import './imgRev.css';
 import React from 'react';
 

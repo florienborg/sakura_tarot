@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './Header.css';
 import logo from '../../assets/img/logo.svg';
 import icono1 from '../../assets/img/icon.png';
-import icono2 from '../../assets/img/iconhome.png'; // Ruta de la imagen de la casita
+import icono2 from '../../assets/img/iconhome.png';
 import { Link, useLocation } from 'react-router-dom';
 
 export default function Header() {
