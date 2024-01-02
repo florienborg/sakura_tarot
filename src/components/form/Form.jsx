@@ -54,9 +54,6 @@ function Form() {
     return valid;
   };
   
-  
-
-
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -69,12 +66,14 @@ function Form() {
         body: JSON.stringify(formData),
       })
         .then((response) => {
+          localStorage.setItem('formData', JSON.stringify(formData));
           setFormData({
             name: '',
             birthdate: '',
             mood: '',
           });
           navigate('/game');
+
         })
         .catch((error) => {
           console.error('Error:', error);

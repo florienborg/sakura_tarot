@@ -1,5 +1,5 @@
 import React from "react";
-import './welcometext.css';
+import './WelcomeText.css';
 
 const WelcomeText = () => {
     return (

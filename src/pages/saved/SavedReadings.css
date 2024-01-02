@@ -3,20 +3,21 @@
     font-family: 'Merienda', sans-serif;
     display: flex;
     flex-direction: column;
-    
 }
 
-.title {
+.title-saved {
     font-size: 30px;
     display: flex;
+    background: linear-gradient(to right, #FFA746, #DA1010);
     justify-content: center;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
-.reading {
+.saved-reading {
     display: flex;
     justify-content: center;
     margin-top: 50px;
+    align-items: center;
 }
 
 .api-card {
@@ -26,11 +27,6 @@
     margin-right: 40px;
  }
 
-
-.mood-data {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-
-}
+ .info-reading {
+    width: 20px;
+ }

@@ -1,33 +1,35 @@
 import React from "react";
-import './savedreadings.css';
+import './SavedReadings.css';
+import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
-import db from "../../db.json";
 import Header from "../../components/header/Header";
 
+const SavedReadings = () => {
+  const { state } = useLocation();
+  console.log(state);
 
-const SavedReadings = () =>{
-const { state } = useLocation();
-console.log(state);
-console.log(db);
+  const savedDataHistory = JSON.parse(localStorage.getItem('savedDataHistory')) || [];
 
-    return (
+  return (
     <div className="savings-container">
-        <Header />
-        <div className="title">
-            Saved Readings
-            </div>
-        <div className="reading">
-            <div className="api-card">
-                <img className="api-card" src="https://i.ibb.co/LJSmQ4f/Reverso-Clow.jpg" alt="Clow Card reverse" />
-            </div>
-            <div className="mood-data">
-            {db.formdata.map(form => (
-            <p> {form.mood} </p>
-            ) )}
-            </div>
-       </div> 
+      <Header />
+      <div className="title-saved">
+        Saved Readings
+      </div>
+  
+      {savedDataHistory.map((savedData, historyIndex) => (
+        <div key={historyIndex} className="saved-reading">
+            <Link to={`/details/${historyIndex}`}>
+            <img className="api-card" src="https://i.ibb.co/LJSmQ4f/Reverso-Clow.jpg" alt="Clow Card reverse" />
+            </Link>
+          <div className="info-reading">
+            <p>{savedData.name}'s Reading</p>
+          </div>
+        </div>
+      ))}
     </div>
+  );
+};  
+  
     
-)};
-
 export default SavedReadings;
